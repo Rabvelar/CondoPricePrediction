@@ -25,7 +25,7 @@ def shorten_categories(categories, cutoff):
 # Load and process data for exploration
 @st.cache
 def load_data():
-    df = pd.read_csv("Project/ml/jobs_in_data_final.csv")
+    df = pd.read_csv("jobs_in_data.csv")
 
     columns_to_drop = ['salary', 'salary_currency', 'job_category', 'work_year', 'company_size', 'employment_type', 'employee_residence']
     existing_columns = df.columns.tolist()
