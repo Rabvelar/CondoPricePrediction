@@ -62,7 +62,7 @@ le_company_location = data["le_company_location"]
 
 # Function to create the prediction page
 def show_predict_page():
-    st.title("📊 Data Jobs Salary Prediction App")
+    st.title("📊Salary Prediction")
 
     st.info('This app predicts the salary for various data job roles based on input features.')
 
