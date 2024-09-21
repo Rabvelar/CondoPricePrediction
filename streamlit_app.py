@@ -46,9 +46,8 @@ def load_data():
 # Load the CSV file for reference
 df = load_data()
 
-# Function to load the saved model and LabelEncoders
 def load_model():
-    with open('saved_steps.pkl', 'rb') as file:
+    with open('./saved_steps.pkl', 'rb') as file:
         data = pickle.load(file)
     return data
 
