@@ -1,7 +1,28 @@
 import streamlit as st
 
+# Add custom CSS for the bordered box
+st.markdown(
+    """
+    <style>
+    .big-box {
+        border: 2px solid #d9d9d9;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    }
+    .center-text {
+        text-align: center;
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
+
+# Start the bordered box
+st.markdown('<div class="big-box">', unsafe_allow_html=True)
+
 # Title and Subtitle
-st.title("Condo Price Prediction")
+st.markdown('<h1 class="center-text">Condo Price Prediction</h1>', unsafe_allow_html=True)
 
 # District Selection
 district = st.selectbox('District', ['Bangkhen', 'Chatuchak', 'Ladprao', 'Huai Khwang', 'Wattana'])
@@ -35,3 +56,6 @@ if st.button('Predict'):
 
 # Display prediction result
 price_prediction = st.text_input(' ', 'THB')
+
+# Close the bordered box
+st.markdown('</div>', unsafe_allow_html=True)
