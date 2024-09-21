@@ -6,6 +6,7 @@ import pandas as pd
 # Load the CSV file (for reference and display purposes)
 df = pd.read_csv("jobs_in_data.csv")
 
+
 # Function to load the saved model and LabelEncoders
 def load_model():
     with open('./saved_steps.pkl', 'rb') as file:
