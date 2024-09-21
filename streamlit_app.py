@@ -1,27 +1,49 @@
 import streamlit as st
 
-# Add custom CSS for the bordered box
+# Add custom CSS for the bordered box and centering the form
 st.markdown(
     """
     <style>
-    .big-box {
-        border: 2px solid #d9d9d9;
-        border-radius: 10px;
-        padding: 20px;
-        background-color: #f9f9f9;
-        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    /* Center the form in the middle of the page */
+    .center-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
     }
+
+    /* Big bordered box for the form */
+    .big-box {
+        border: 2px solid #e3e3e3;
+        border-radius: 15px;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+
     .center-text {
         text-align: center;
+        font-family: 'Arial', sans-serif;
     }
+
+    .predict-button {
+        display: flex;
+        justify-content: center;
+    }
+
     </style>
     """, unsafe_allow_html=True
 )
 
+# Start the centered div
+st.markdown('<div class="center-form">', unsafe_allow_html=True)
+
 # Start the bordered box
 st.markdown('<div class="big-box">', unsafe_allow_html=True)
 
-# Title and Subtitle
+# Title
 st.markdown('<h1 class="center-text">Condo Price Prediction</h1>', unsafe_allow_html=True)
 
 # District Selection
@@ -50,12 +72,15 @@ with col2:
     bicycle_parking = st.checkbox('Bicycle Parking')
 
 # Predict Button
+st.markdown('<div class="predict-button">', unsafe_allow_html=True)
 if st.button('Predict'):
-    # Insert prediction logic here, using user input data
+    # Insert prediction logic here
     st.write("Prediction goes here...")  # Placeholder for prediction result
+st.markdown('</div>', unsafe_allow_html=True)
 
-# Display prediction result
-price_prediction = st.text_input(' ', 'THB')
+# Display prediction result input
+price_prediction = st.text_input('', 'THB')
 
-# Close the bordered box
+# Close the bordered box and centered form
+st.markdown('</div>', unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
