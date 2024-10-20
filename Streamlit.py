@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
-from datetime import datetime
 
 # Set background color with CSS
 st.markdown("""
