@@ -1,5 +1,5 @@
-streamlit==1.25.0  # Streamlit for building web apps
-pandas==2.1.1      # For data manipulation
-matplotlib==3.8.0  # For plotting
-catboost==1.2      # For the CatBoost model
-scikit-learn==1.3.0 # In case any scikit-learn utilities are needed
+streamlit
+pandas
+matplotlib
+catboost
+scikit-learn
