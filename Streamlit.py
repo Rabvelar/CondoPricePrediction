@@ -4,14 +4,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 # Set background color with CSS
-st.markdown("""
-    <style>
-    .stApp {
-        background: linear-gradient(to bottom, #000080, #000000);  /* Blue to Black gradient */
-        color: white;  /* White text color */
-    }
-    </style>
-    """, unsafe_allow_html=True)
+
 
 # Load the saved CatBoost model
 @st.cache_resource
