@@ -15,7 +15,14 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 DEBUG=True
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'condopriceprediction.fly.dev',
+    '.fly.dev',  # Allows any subdomain on Fly.io (optional, but good)
+    '[::]',      # Required for internal Fly.io routing
+    'localhost',
+    '127.0.0.1',
+    # You can remove '.herokuapp.com' if you are completely migrating
+]
 
 
 # Application definition
