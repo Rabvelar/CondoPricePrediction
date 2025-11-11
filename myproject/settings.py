@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 from decouple import config  # You'll need to install python-decouple
-import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -91,8 +90,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# Configure Django App for Heroku
-django_heroku.settings(locals(), databases=False, staticfiles=False)
 
 
 # Default primary key field type
